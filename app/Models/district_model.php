@@ -10,14 +10,11 @@ class district_model extends Model{
     public $timestamps = false;
     protected $table = 'districts';
     protected $fillable = [
-        "district_name",
+        "district",
         "district_id ",
-        "country_id",
-        "country_code",
         "state_id",
-        "state_code ",
         "status",
         "created_at",
-      //  "updated_at"
+        "updated_at"
     ];
 }

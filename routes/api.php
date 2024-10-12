@@ -174,6 +174,10 @@ Route::post('/logout', 'App\Http\Controllers\admin_controller@logout');
 
 // -- Biriyani_Palayam Banner
 Route::post('/add_banner', 'App\Http\Controllers\banner_controller@add_banner');
+Route::post('/get_banner', 'App\Http\Controllers\banner_controller@get_banner');
+Route::post('/update_banner/{banner_id}', 'App\Http\Controllers\banner_controller@update_banner');
+Route::post('/Tsit_BPM_Del_Banner/{token}/{banner_id}', 'App\Http\Controllers\banner_controller@Tsit_BPM_Del_Banner');
+
 
 // -- Biriyani_palayam Winner
 Route::post('/add_winner', 'App\Http\Controllers\winner_controller@add_winner');
@@ -222,5 +226,14 @@ Route::post('/check_version/{version_name}/{version_code}', 'App\Http\Controller
 
 
 // -- Biriyani_Palayam Location
-Route::post('/Tsit_BPM_Get_State', 'App\Http\Controllers\location_controller@Tsit_BPM_Get_State');
-Route::post('/Tsit_BPM_Get_District/{state_id}', 'App\Http\Controllers\location_controller@Tsit_BPM_Get_District');
+Route::post('/Tsit_BPM_Add_State/{admin_id}', 'App\Http\Controllers\state_controller@Tsit_BPM_Add_State');
+Route::post('/Tsit_BPM_Get_State', 'App\Http\Controllers\state_controller@Tsit_BPM_Get_State');
+
+
+Route::post('/Tsit_BPM_Add_Dist/{admin_id}/{state_id}', 'App\Http\Controllers\district_controller@Tsit_BPM_Add_Dist');
+Route::post('/Tsit_BPM_Get_District/{state_id}', 'App\Http\Controllers\district_controller@Tsit_BPM_Get_District');
+
+
+
+Route::post('/sendPushNotification', 'App\Http\Controllers\push_notification_controller@sendPushNotification');
+

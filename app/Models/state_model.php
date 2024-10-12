@@ -10,11 +10,9 @@ class state_model extends Model{
     public $timestamps = false;
     protected $table = 'states';
     protected $fillable = [
-        "name",
-        "country_id ",
-        "country_code",
         "state_id",
-        "state_code ",
+        "state",
+        "status ",
         "created_at",
         "updated_at"
     ];
